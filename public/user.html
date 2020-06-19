@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Boardgame Swap</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="shortcut icon" href="img/knight outline.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+
+<body class="grey darken-2">
+    <div class="container">
+        <h2 class="gametext center">Username's Page</h2>
+        <div class="row">
+            <div class="col l4 offset-l2 m12 s12">
+                <p class="gametext">Owned Games</p>
+                <ul class="grey lighten-1">
+                    <li class="grey lighten-1">test<a class="right waves-effect waves-red btn-flat">DELETE</a></li><br>
+                    <li class="grey lighten-1">test<a class="right waves-effect waves-red btn-flat">DELETE</a></li><br>
+                    <li class="grey lighten-1">test<a class="right waves-effect waves-red btn-flat">DELETE</a></li><br>
+                    <li class="grey lighten-1">test<a class="right waves-effect waves-red btn-flat">DELETE</a></li><br>
+
+                </ul>
+            </div>
+            <div class="col l4 m12 s12">
+                <p class="gametext">Requested Games</p>
+                <ul class="grey">
+                    <li class="grey">test<a class="right waves-effect waves-red btn-flat">DELETE</a></li><br>
+                    <li class="grey">test<a class="right waves-effect waves-red btn-flat">DELETE</a></li><br>
+                    <li class="grey">test<a class="right waves-effect waves-red btn-flat">DELETE</a></li><br>
+                    <li class="grey">test<a class="right waves-effect waves-red btn-flat">DELETE</a></li><br>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <p class="gametext">submit new game</p>
+        </div>
+        <div class="input-field">
+            <select>
+                <option value="" disabled selected>Requested or Owned?</option>
+                <option id="owned" value="owned">Owned</option>
+                <option id="requested" value="requested">Requested</option>
+            </select>
+        </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>
+</body>
+
+</html>
