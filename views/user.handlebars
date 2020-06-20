@@ -49,7 +49,7 @@
                 <select>
                     <option value="" disabled selected>games</option>
                     {{#each result}}
-                    <option data-name="{{this.name}}" data-genre="{{this.genre}}" data-players="{{this.players}}" id="data">{{this.name}} - {{this.players}}</option>
+                    <option data-name="{{this.name}}" data-time="{{this.time}}" data-players="{{this.players}}" id="data">{{this.name}} - {{this.players}}</option>
                     {{/each}}
                 </select>
             </div>
@@ -62,3 +62,4 @@
             $('select').formSelect();
         });
     </script>
+    <script src="js/user.js"></script>
