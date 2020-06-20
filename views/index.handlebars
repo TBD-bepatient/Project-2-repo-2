@@ -1,0 +1,29 @@
+
+    <div class="container">
+
+        <h1 class="gametext center">Boardgame Swap!</h1>
+
+        <div class="row">
+            <form>
+                <div class="col l4 m0 s0"></div>
+                <div class="input-field col l4 m12 s12">
+                    <select>
+                        <option value="" disabled selected>Choose your option</option>
+                        <option id="1">Option 1</option>
+                        <option id="2">Option 2</option>
+                        <option id="3">Option 3</option>
+                    </select>
+                    <label class="black-text">Materialize Select</label>
+                    <button class="login">Login</button>
+                    <button class="signup">signup</button>
+                </div>
+                <div class="col l4 m0 s0"></div>
+            </form>
+        </div>
+
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>

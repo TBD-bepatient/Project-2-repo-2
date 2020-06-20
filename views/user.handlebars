@@ -1,0 +1,45 @@
+<div class="container">
+        <h2 class="gametext center">Username's Page</h2>
+        <div class="row">
+            <div class="col l4 offset-l2 m12 s12">
+                <p class="gametext">Owned Games</p>
+                <ul class="grey lighten-1">
+                    {{#each game}}
+                    {{#if this.owned}}
+                    <li class="grey lighten-1">
+                        {{this.name}}<a data-id="{{this.id}}" class="right waves-effect waves-red btn-flat delete">DELETE</a>
+                    </li><br>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="col l4 m12 s12">
+                <p class="gametext">Requested Games</p>
+                <ul class="grey">
+                    {{#each game}}
+                    {{#unless this.owned}}
+                    <li class="grey">
+                        {{this.name}}<a data-id="{{this.id}}" class="right waves-effect waves-red btn-flat delete">DELETE</a>
+                    </li><br>
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <p class="gametext">submit new game</p>
+        </div>
+        <div class="input-field">
+            <select>
+                <option value="" disabled selected>Requested or Owned?</option>
+                <option id="owned" value="owned">Owned</option>
+                <option id="requested" value="requested">Requested</option>
+            </select>
+        </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>
