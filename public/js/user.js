@@ -1,7 +1,4 @@
 $(function () {
-    $(".search").on("click", function (event) {
-
-    });
     $(".delete").on("click", function (event) {
         var id = $(this).data("id");
 
@@ -12,11 +9,5 @@ $(function () {
                 location.reload();
             }
         );
-    });
-
-    $(".create-form").on("submit", function (event) {
-        // Make sure to preventDefault on a submit event.
-        event.preventDefault();
-
     });
 });
