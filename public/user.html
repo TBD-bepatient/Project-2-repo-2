@@ -37,17 +37,35 @@
                 </ul>
             </div>
         </div>
+        <br><br>
         <div class="row">
             <p class="gametext">submit new game</p>
         </div>
-        <div class="input-field">
-            <select>
-                <option value="" disabled selected>Requested or Owned?</option>
-                <option id="owned" value="owned">Owned</option>
-                <option id="requested" value="requested">Requested</option>
-            </select>
+        <div class="row">
+            <div class="input-field col s6">
+                <input placeholder="Game Name">
+            </div>
+            <div><button class="nudge waves-effect waves-red btn-flat white">Search</button></div>
         </div>
+        <div class="row">
+            <div class="input-field col s3">
+                <select>
+                    <option value="" disabled selected>Requested or Owned?</option>
+                    <option id="owned" data-owned="owned">Owned</option>
+                    <option id="requested" data-owned="requested">Requested</option>
+                </select>
+            </div>
+            <div class="input-field col s3">
+                <select>
+                    <option value="" disabled selected>games</option>
+                    <option data-name="data.name" data-genre="data.genre" data-players="data.players" id="data">data</option>
+                    <option data-name="data.name" data-genre="data.genre" data-players="data.players" id="data">data</option>
+                    <option data-name="data.name" data-genre="data.genre" data-players="data.players" id="data">data</option>
+                </select>
+            </div>
+            <div><button class="nudge waves-effect waves-red btn-flat white">submit</button></div>
         </div>
+
     </div>
     <script>
         $(document).ready(function () {
