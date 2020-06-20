@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Boardgame Swap</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="shortcut icon" href="img/knight outline.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+
+<body class="grey darken-2">
+    <div class="container">
+        <h2 class="gametext center">Catalog</h2>
+
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s3">
+                        <select>
+                            <option value="" disabled selected></option>
+                            <option id="Game">Game</option>
+                            <option id="User">User</option>
+                        </select>
+                        <label class="black-text">User or Game</label>
+                    </div>
+                    <div class="input-field col s3">
+                        <select>
+                            <option value="" disabled selected></option>
+                            <option id="Owned">Owned</option>
+                            <option id="Requested">Requested</option>
+                        </select>
+                        <label class="black-text">Owned or Requested</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="search" type="text" class="validate">
+                        <label for="search">Search Term</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="waves-effect waves-red btn-flat white">Search</button>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <p class="gametext">Look what we got!</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Game</th>
+                            <th># of players</th>
+                            <th>Genre</th>
+                            <th>User</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Cool Game</td>
+                            <td>2-6</td>
+                            <td>fun</td>
+                            <td>me!</td>
+                        </tr>
+                        <tr>
+                            <td>rad Game</td>
+                            <td>2</td>
+                            <td>fun</td>
+                            <td>me!</td>
+                        </tr>
+                        <tr>
+                            <td>co-op Game</td>
+                            <td>4</td>
+                            <td>fun</td>
+                            <td>me!</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>
+</body>
+
+</html>
