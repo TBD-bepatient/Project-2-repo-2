@@ -1,7 +1,5 @@
 $(function () {
-    $(".search").on("click", function (event) {
-
-    });
+    
     $(".delete").on("click", function (event) {
         var id = $(this).data("id");
 
