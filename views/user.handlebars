@@ -7,7 +7,7 @@
                     {{#each game}}
                     {{#if this.owned}}
                     <li class="grey lighten-1">
-                        {{this.name}}<a data-id="{{this.id}}" class="right waves-effect waves-red btn-flat delete">DELETE</a>
+                        {{this.name}}<a data-id="{{this.id}}" class="delete right waves-effect waves-red btn-flat delete">DELETE</a>
                     </li><br>
                     {{/if}}
                     {{/each}}
@@ -19,7 +19,7 @@
                     {{#each game}}
                     {{#unless this.owned}}
                     <li class="grey">
-                        {{this.name}}<a data-id="{{this.id}}" class="right waves-effect waves-red btn-flat delete">DELETE</a>
+                        {{this.name}}<a data-id="{{this.id}}" class="delete right waves-effect waves-red btn-flat delete">DELETE</a>
                     </li><br>
                     {{/unless}}
                     {{/each}}
@@ -34,7 +34,7 @@
             <div class="input-field col s6">
                 <input placeholder="Game Name">
             </div>
-            <div><button class="nudge waves-effect waves-red btn-flat white">Search</button></div>
+            <div><button class="Search nudge waves-effect waves-red btn-flat white">Search</button></div>
         </div>
         {{#if searched}}
         <div class="row">
@@ -53,7 +53,7 @@
                     {{/each}}
                 </select>
             </div>
-            <div><button class="nudge waves-effect waves-red btn-flat white">submit</button></div>
+            <div><button class="send nudge waves-effect waves-red btn-flat white">submit</button></div>
         </div>
         {{/if}}
     </div>

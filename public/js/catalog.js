@@ -1,20 +1,8 @@
 $(function () {
-    
-    $(".delete").on("click", function (event) {
-        var id = $(this).data("id");
-
-        $.ajax("/api/game/" + id, {
-            type: "DELETE",
-        }).then(
-            function () {
-                location.reload();
-            }
-        );
-    });
-
-    $(".create-form").on("submit", function (event) {
-        // Make sure to preventDefault on a submit event.
+    $(".search").on("click", function (event) {
         event.preventDefault();
-
+        console.log($("#place")[0].selectedOptions[0].innerText)
+        console.log($("#type")[0].selectedOptions[0].innerText)
+        console.log($("#search")[0].value)
     });
 });
