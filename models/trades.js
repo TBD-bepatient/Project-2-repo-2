@@ -2,7 +2,7 @@ module.exports = function (sequelize, DataTypes) {
     let Trades = sequelize.define("Trades", {
 
         tradeUser: {
-            type: DataTypes.INTERGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
 
